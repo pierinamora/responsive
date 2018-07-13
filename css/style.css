@@ -1,0 +1,253 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body{
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+nav{
+  width: 100%;
+  height: 80px; /*cambiar*/
+  background-color: #000;
+  display: flex;
+}
+#menu{
+  width: 80%;
+  display: none;
+  list-style: none;
+}
+#menu li{
+  width:15%;
+  float: left;
+  padding: 0.5em;
+  text-align: center;
+  /* margin: 0 20px 0 10px; */
+}
+#menu li a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+}
+#menu li:hover{
+  background-color: rgba(161, 238, 19, 0.3);
+  /* background-color: rgba(123, 169, 37, 0.5); */
+  border-radius: 5px;
+}
+#logo{
+  width:75px;
+  padding: 15px;
+  margin-left: 20px;
+}
+#isotipo{
+  display: none;
+  float: right;
+  margin-top: 25px;
+  margin-left: 5px;
+  font-size: 2rem;
+  font-family: 'Dancing Script', cursive!important;
+  font-weight: bolder;
+  color:#EFFBF5/*#01DFA5; #7ba925*/
+}
+/*Hasta aqui el menu*/
+/* Comienzo del main */
+main{
+  width: 100%;
+  background: #fff;
+  /* display: flex;
+  flex-direction: column; */
+}
+.photo{
+  margin-top: 25px;
+  text-align: center;
+}
+#central_img{
+  width: 75%;
+  background-color: #D8D8D8;
+}
+#central_caption{
+width: 100%
+height: 50%;
+}
+#title{
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Dancing Script', cursive!important;
+  font-size: 2rem;
+  padding-top: 15px;  /*cambiar*/
+}
+#subtitle{
+  text-align: center;
+  font-weight: lighter;
+  font-size: 1.2rem;
+  padding: 18px 16px 0; /*cambiar*/
+  /* font-family: 'Dancing Script', cursive!important; */
+  font-family: 'Handlee', cursive!important;
+  letter-spacing: 0.05rem;
+}
+.sections{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: #E6F8E0; /* #E0F8F1;*/
+  margin-top: 30px;/*cambiar*/
+  padding-bottom: 20px;
+}
+section{
+  width: 40%;
+  height: 30%;
+  padding: 20px 0 20px 0;
+}
+.img{
+  width: 70%;
+  margin-bottom: 10px; /*cambiar*/
+  display: block;
+  margin: 0 auto 10px auto;
+}
+.img-name{
+  text-align: center;
+  font-weight: bold;
+}
+.img-description{
+  color: #A4A4A4;
+  text-align:justify;
+  font-size: 0.9rem;
+  padding: 10px 20px 10px 20px;
+}
+
+footer{
+  width: 100%;
+  height: 80px; /*cambiar*/
+  background-color: #000;
+  position: sticky;
+}
+
+/********************************************MEDIA QUERYS,BREAKPOINTS*************************************************************/
+
+@media screen and (min-width: 768px){ /* only  and (max-widht: 1024px){ Portrait and landscape*/
+  #menu li{
+    width:20%;
+    padding: 0.2em;
+  } /*no me lo esta tomando*/
+  #central_img{
+    width: 60%;
+  }
+  #title{
+    font-size: 2.5rem;
+    padding-top: 20px;  /*cambiar*/
+}
+  #subtitle{
+    font-size: 1.5rem;
+    padding: 20px 18px 0; /*cambiar unidad de medida/le sume 2 px al padding en lugar de 5 coo venia haciendo con los demas*/
+    font-family: 'Dancing Script', cursive!important;
+  }
+  .img{
+    /* width: 70%; */
+    margin-bottom: 12px; /*cambiar*/
+    /* display: block; */
+    margin: 0 auto 12px auto;/*cambiar*/
+  }
+  .img-name{
+    font-size: 1.1rem;
+  }
+  .img-description{
+    color: #A4A4A4;
+    text-align: center;
+    font-size: 1rem;
+    /* padding: 12px; */
+  }
+}
+
+@media screen and (min-width: 768px) and (orientation : landscape){ /* and (max-widht: 1024px)/*Only landscape*/
+  nav{
+    justify-content: space-around;
+    align-items: center;
+  }
+  #logo{
+    width:60px;
+    padding: 5px;
+    /* margin-left: 20px; */
+  }
+  #isotipo{
+    /* display: none;
+    float: right; */
+    margin-top: 20px;
+    margin-left:0;
+    font-size: 1.5rem;
+    /* font-family: 'Dancing Script', cursive!important;
+    font-weight: bolder;
+    color:#EFFBF5/*#01DFA5; #7ba925*/ */
+  }
+  #menu{
+    display: block;
+  }
+  #isotipo{
+    display: block;
+  }
+  .sections{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: #E6F8E0; /* #E0F8F1;*/
+    margin-top: 30px;/*cambiar*/
+    padding-bottom: 20px;
+  }
+  section{
+    width: 25%;
+    height: 25%;
+    padding: 20px 15px 20px 15px;
+  }
+}
+
+@media screen and (min-width: 1280px){ /*and (max-widht: 1024px)/*Desktop*/
+  #menu li{
+      width:15%;
+      padding: 0.5em;
+  }
+  #menu{
+    display: block;
+  }
+  #isotipo{
+    display: block;
+  }
+  #central_img{
+    width: 50%;
+  }
+  #title{
+    font-size: 2.5rem;
+  }
+  #subtitle{
+    font-size: 1.5rem;
+    padding: 18px 16px 0; /*cambiar*/
+  }
+  .sections{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: #E6F8E0; /* #E0F8F1;*/
+    margin-top: 30px;/*cambiar*/
+    padding-bottom: 20px;
+  }
+  section{
+    width: 25%;
+    height: 25%;
+    padding: 20px 15px 20px 15px;
+  }
+  .img{
+    width: 60%;
+    margin-bottom: 14px; /*cambiar*/
+    /* display: block; */
+    margin: 0 auto 14px auto;/*cambiar*/
+  }
+  .img-name{
+    font-size: 1.1rem;
+  }
+  .img-description{
+    color: #A4A4A4;
+    text-align: center;
+    font-size: 1rem;
+    /* padding: 12px; */
+  }
+}
